@@ -1,0 +1,51 @@
+/* Histogram layout */
+
+#histogram {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Scatterplot layout */
+
+#scatterplot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* SVG styling */
+
+svg {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Histogram bars */
+
+.bar {
+    fill: steelblue;
+}
+
+/* Axes for both charts */
+
+.axis text {
+    font-size: 12px;
+    fill: #444444;
+}
+
+.axis path,
+.axis line {
+    stroke: #666666;
+    stroke-width: 1px;
+}
+
+/* Axis labels */
+
+.axis-label {
+    font-size: 14px;
+    font-weight: 500;
+    fill: #333333;
+}

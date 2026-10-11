@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appliance Energy Consumption</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/PowerIcon.png" alt="Power logo" class="logo">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="televisions.html" class="nav-link">Televisions</a>
+                <a href="about.html" class="nav-link">About Us</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+                <p class="eyebrow">AUSTRALIAN APPLIANCE ENERGY</p>
+
+                <h1>
+                    Understanding
+                    <span>Energy Consumption</span>
+                </h1>
+
+                <p class="hero-text">
+                    Explore how everyday household appliances consume
+                    electricity and discover simple ways to improve
+                    energy efficiency.
+                </p>
+
+                <a href="#calculator" class="primary-button">
+                    Try the Calculator
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- Introduction -->
+        <section class="content-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">THE BASICS</p>
+
+                <h2>
+                    Appliance Energy in Australia
+                </h2>
+
+                <p>
+                    Household appliances are an important part of everyday
+                    life. From televisions and refrigerators to washing
+                    machines and air conditioners, appliances contribute
+                    to household electricity consumption.
+                </p>
+            </div>
+
+
+            <div class="info-grid">
+
+                <article class="info-card">
+                    <h3>Power Usage</h3>
+
+                    <p>
+                        Electrical appliances use different amounts of
+                        power depending on their size, design and operating
+                        conditions.
+                    </p>
+                </article>
+
+
+                <article class="info-card">
+                    <h3>Hours of Use</h3>
+
+                    <p>
+                        The amount of time an appliance operates can have
+                        a significant effect on its total energy consumption.
+                    </p>
+                </article>
+
+
+                <article class="info-card">
+                    <h3>Energy Efficiency</h3>
+
+                    <p>
+                        Choosing efficient appliances and reducing
+                        unnecessary usage can help reduce electricity
+                        consumption.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+        <div class="responsive-svg-container"></div>
+
+
+        <!-- Calculator -->
+        <section class="calculator-section" id="calculator">
+
+            <div class="section-heading">
+                <p class="eyebrow">INTERACTIVE TOOL</p>
+
+                <h2>Appliance Energy Calculator</h2>
+
+                <p>
+                    Enter the appliance's power usage, average daily usage
+                    and electricity price to estimate its energy consumption.
+                </p>
+            </div>
+
+
+            <div class="calculator">
+
+                <form id="energy-form">
+
+                    <div class="form-group">
+                        <label for="power">
+                            Appliance Power (Watts)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="power"
+                            name="power"
+                            placeholder="e.g. 150"
+                            min="1"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="hours">
+                            Hours Used Per Day
+                        </label>
+
+                        <input
+                            type="number"
+                            id="hours"
+                            name="hours"
+                            placeholder="e.g. 5"
+                            min="0"
+                            max="24"
+                            step="0.5"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="price">
+                            Electricity Price (cents/kWh)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="price"
+                            name="price"
+                            placeholder="e.g. 30"
+                            min="0"
+                            step="0.1"
+                        >
+                    </div>
+
+
+                    <button type="submit" class="primary-button">
+                        Calculate Energy
+                    </button>
+
+                </form>
+
+
+                <!-- JavaScript will update this area -->
+                <div id="calculator-results" class="calculator-results">
+
+                    <p>
+                        Enter your appliance information to see the results.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="faq-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">FAQ</p>
+
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+
+            <div class="faq-container">
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        What does appliance power usage mean?
+
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Power usage describes how much electrical power
+                            an appliance uses while it is operating. It is
+                            commonly measured in watts.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        What is a kilowatt-hour?
+
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            A kilowatt-hour, or kWh, is a unit used to measure
+                            the amount of electrical energy consumed over time.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        How can I reduce appliance energy consumption?
+
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Reducing unnecessary usage, choosing efficient
+                            appliances and avoiding leaving appliances running
+                            when they are not needed can help reduce energy
+                            consumption.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Appliance Energy Consumption Website
+        </p>
+
+        <p>
+            Created by Iqbal Sameer
+        </p>
+
+        <p>
+            Generative AI acknowledgement:
+            ChatGPT was used to assist with website structure,
+            coding guidance and debugging.
+        </p>
+
+    </footer>
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

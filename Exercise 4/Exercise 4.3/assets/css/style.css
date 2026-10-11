@@ -1,0 +1,516 @@
+/* =========================
+   General Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fa;
+    color: #17232c;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #dce5e9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 30px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+.logo-link:hover .logo {
+    transform: scale(1.08);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    position: relative;
+
+    text-decoration: none;
+    color: #34454f;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 12px 18px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #007c91;
+    background: #eef7f9;
+}
+
+.nav-link.active {
+    color: #007c91;
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 3px;
+
+    height: 3px;
+
+    background: #007c91;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f5f7,
+            #ffffff
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 80px 30px;
+}
+
+.eyebrow {
+    color: #007c91;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 750px;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #007c91;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    font-size: 18px;
+    color: #52636c;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.primary-button {
+    display: inline-block;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #007c91;
+    color: #ffffff;
+
+    padding: 13px 22px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background: #005f70;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.content-section,
+.calculator-section,
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 90px 30px;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: #5d6c74;
+}
+
+
+/* =========================
+   Information Cards
+========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    background: #ffffff;
+
+    border: 1px solid #dce5e9;
+    border-radius: 10px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.info-card h3 {
+    color: #007c91;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: #5d6c74;
+}
+
+
+/* =========================
+   Calculator
+========================= */
+
+.calculator-section {
+    max-width: none;
+
+    background: #eaf5f7;
+
+    padding-left: max(30px, calc((100% - 1140px) / 2));
+    padding-right: max(30px, calc((100% - 1140px) / 2));
+}
+
+.calculator {
+    max-width: 850px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5e9;
+    border-radius: 12px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd7dc;
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #007c91;
+}
+
+.calculator-results {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    background: #f1f7f8;
+}
+
+.calculator-results h3 {
+    margin-bottom: 15px;
+    color: #007c91;
+}
+
+.result-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.result-item {
+    padding: 15px;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    border: 1px solid #dce5e9;
+}
+
+.result-item strong {
+    display: block;
+
+    font-size: 20px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-container {
+    max-width: 850px;
+}
+
+.faq-item {
+    background: #ffffff;
+
+    border: 1px solid #dce5e9;
+
+    border-radius: 8px;
+
+    margin-bottom: 12px;
+
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+
+    background: #ffffff;
+
+    padding: 20px 22px;
+
+    text-align: left;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    color: #17232c;
+}
+
+.faq-question:hover {
+    background: #f4fafb;
+}
+
+.faq-question span {
+    color: #007c91;
+
+    font-size: 24px;
+
+    transition: transform 0.2s ease;
+}
+
+.faq-answer {
+    display: none;
+
+    padding: 0 22px 20px;
+
+    color: #5d6c74;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item.open .faq-question span {
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    background: #17232c;
+    color: #dce5e9;
+
+    text-align: center;
+
+    padding: 35px 25px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding: 60px 25px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section,
+    .calculator-section,
+    .faq-section {
+        padding: 60px 25px;
+    }
+
+}
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}

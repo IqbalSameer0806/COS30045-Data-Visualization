@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4.1 - SVG House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Exercise 4.1 - SVG House</h1>
+
+    <p>
+        This picture was created using SVG shapes to demonstrate
+        how SVG coordinates and elements work.
+    </p>
+
+    <svg width="900" height="600" viewBox="0 0 900 600">
+
+        <!-- Sky -->
+        <rect x="0" y="0" width="900" height="450" fill="lightblue" />
+
+        <!-- Grass -->
+        <rect x="0" y="450" width="900" height="150" fill="lightgreen" />
+
+        <!-- Sun -->
+        <circle cx="100" cy="90" r="50"
+                fill="gold"
+                stroke="orange"
+                stroke-width="4" />
+
+        <!-- Cloud -->
+        <ellipse cx="690" cy="100" rx="70" ry="30" fill="white" />
+        <ellipse cx="750" cy="105" rx="60" ry="25" fill="white" />
+
+        <!-- House body -->
+        <rect x="300" y="260"
+              width="300" height="230"
+              fill="burlywood"
+              stroke="saddlebrown"
+              stroke-width="4" />
+
+        <!-- Roof -->
+        <polygon points="270,260 450,120 630,260"
+                 fill="firebrick"
+                 stroke="darkred"
+                 stroke-width="4" />
+
+        <!-- Chimney -->
+        <rect x="520" y="150"
+              width="45" height="90"
+              fill="brown"
+              stroke="black"
+              stroke-width="3" />
+
+        <!-- Door -->
+        <rect x="420" y="370"
+              width="65" height="120"
+              fill="saddlebrown"
+              stroke="black"
+              stroke-width="3" />
+
+        <!-- Door handle -->
+        <circle cx="470" cy="430" r="5" fill="gold" />
+
+        <!-- Windows grouped together -->
+        <!-- Windows grouped together -->
+<g class="windows"
+   transform="translate(325, 310)"
+   fill="lightyellow"
+   stroke="darkblue"
+   stroke-width="4">
+
+    <!-- Left window -->
+    <rect x="0" y="0" width="70" height="70" />
+
+    <line x1="35" y1="0" x2="35" y2="70" />
+    <line x1="0" y1="35" x2="70" y2="35" />
+
+    <!-- Right window -->
+    <rect x="180" y="0" width="70" height="70" />
+
+    <line x1="215" y1="0" x2="215" y2="70" />
+    <line x1="180" y1="35" x2="250" y2="35" />
+
+</g>
+
+        <!-- Garden path -->
+        <path d="M 420 490 Q 450 530 390 600
+                 L 520 600
+                 Q 490 530 485 490 Z"
+              fill="tan"
+              stroke="peru"
+              stroke-width="3" />
+
+        <!-- Fence -->
+        <polyline points="40,500 100,460 160,500 220,460 280,500"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="8" />
+
+        <!-- Tree trunk -->
+        <rect x="710" y="370"
+              width="40" height="120"
+              fill="saddlebrown" />
+
+        <!-- Tree -->
+        <circle cx="730" cy="340" r="70"
+                fill="forestgreen"
+                stroke="darkgreen"
+                stroke-width="4" />
+
+        <!-- Label -->
+        <text x="450"
+              y="50"
+              text-anchor="middle"
+              font-size="28"
+              font-family="Arial"
+              fill="darkslategray">
+            My SVG House and Garden
+        </text>
+
+    </svg>
+    <section class="coordinates">
+    <h2>SVG Coordinate System</h2>
+
+    <p>
+        The annotated image below shows how the coordinates used in
+        the SVG code relate to the shapes in the drawing.
+    </p>
+
+    <img
+        src="images/svg-coordinates.png"
+        alt="Annotated SVG house showing the coordinates of different SVG shapes"
+    >
+</section>
+
+</body>
+</html>
